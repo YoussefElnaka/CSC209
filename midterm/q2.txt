@@ -1,0 +1,30 @@
+MIDTERM TEST QUESTION 2
+(Multiple Choice: 5 marks)
+
+For each question, please indicate your selection(s) by putting an
+asterisk (*) at the beginning of your chosen response(s).
+
+(A) 3 marks
+Which of the following are possible return values of this call of fread:
+fread(buf, 20, 9, fp);
+
+Choose all that apply:
+a. -1
+*b. 0
+*c. 3
+*d. 9
+e. 10
+
+TODO put zero or more *'s above
+
+
+(B) 2 marks
+We want to allocate memory to hold exactly 10 characters. We write this:
+char *x = malloc(10 * sizeof(x));
+
+Which of the following statements is correct? Choose one:
+a. The code is correct and achieves exactly what we want
+b. The code is incorrect; x's type is wrong
+*c. The code is incorrect; the amount of memory requested is wrong
+
+TODO put a * above

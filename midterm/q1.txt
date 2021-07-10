@@ -1,0 +1,65 @@
+MIDTERM TEST QUESTION 1
+(Shell Usage: 5 marks)
+
+We provided a file in your midterm starter code called cano.txt
+It contains the complete contents of Sherlock Holmes. 
+
+The command: 
+tr ' ' '\n' < cano.txt | sort 
+will tokenize the text by splitting it by whitespace. 
+(this may take a few seconds to complete, be patient; sample output below)
+... (continues above).
+zigzagged
+zinc
+zinc
+zinc
+zoology
+zoology,
+zum
+zum
+
+
+Your task is to look at the 'uniq' and 'sort' man pages to complete the following 
+line of bash script so that its output lists in reverse order the frequency
+of each word (token). In other words we want you to produce the sample output
+below to list the frequency of words in sorted order as shown:
+
+
+A) 1 Mark
+Which option of uniq is used to add a count to uniq's output indicating how 
+often a line occured?  
+
+-c
+
+
+B) 1 Mark
+Which option listed under Ordering options is the most appropriate
+for helping you sort the 1st column (the count)? Briefly 
+explain why this option is useful. 
+
+-n, This option sorts the first column in order, this could help you keep track of the most common words/tokkens.
+
+C) 3 Marks 
+Putting it all together. Use your answer to the previous questions
+to complete this bash script (don't forget to add the option to 
+sort by the 1st column). 
+
+Complete this line of ba
+tr ' ' '\n' < cano.txt | sort | uniq -c | sort -n
+Desired sample output:
+... (continues above)
+6481 you
+6921 he
+7344 his
+9527 was
+9895 that
+10024 in
+14148 I
+14897 a
+15446 to
+16330 and
+16477 of
+33165 the
+323910 
+
+
