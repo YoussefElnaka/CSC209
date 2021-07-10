@@ -1,0 +1,49 @@
+MIDTERM TEST QUESTION 3
+(Short Answer: 7 marks)
+
+(A) 2.5 marks
+Declare an array x with five elements, where each element is a
+pointer to a function that takes a pointer to char and
+returns a pointer to pointer to int.
+Don't use struct or typedef.
+
+int **(*x[5]) (char *x);
+
+(B) 4.5 marks
+Here is a makefile:
+
+---makefile starts on next line---
+something: stuff
+	echo first
+
+stuff:
+	echo second > stuff
+---makefile ends on the line above this---
+
+Suppose that the current directory contains only this makefile.
+
+The first time we run 'make', file 'stuff' is created.
+Carefully explain the steps that lead to the creation of 'stuff'.
+	
+	When this makefile is run the first condition is executed first but since it has a dependency on "stuff" and "stuff" hasn't been created yet,
+	then we move on to the next condition. The second condition moves into the file "stuff" and since it doesn't exist it creates it.
+
+
+Every time we run 'make', whether it's the first time or not, 'first' is output.
+Explain why 'first' is always output like this.
+	
+	That's because
+	Case 1: if the file 'stuff' is already created then the program will just output 'first' as set in the 'something' condition.
+	Case 2: If 'stuff' doesn't exist then the first condition will not execute unless there is a 'stuff' file so it will move on to the second condition. 
+	Once the second condition is executed the program will return to the first condition where it output 'first'. 
+	So in both cases the program output is 'first'
+
+Now suppose we create a file called 'something' in the same directory. Running make now
+will not result in running the action of the first rule. Why not?
+
+TODO your explanation
+
+Explain why the use of PHONEY targets could be used to output 'first' every time we
+run 'make' regardless of whether or not a file called 'something' exists in the directory.
+
+TODO your explanation

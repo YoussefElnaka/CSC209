@@ -1,0 +1,28 @@
+MIDTERM TEST QUESTION 7
+(File systems and the real world: 2 marks)
+
+In the paper "Fixing Unix/Linux/POSIX Filenames: Control Characters 
+(such as Newline), Leading Dashes, and Other Problems" (2020 version, see paper.pdf provided),
+ Wheeler describes various flaws and security loopholes that modern filesystems exhibit.
+
+
+Task A)  
+
+Pick 1 of these flaws/security loopholes and describe why the filesystem you 
+implemented for A1 also exhibits the flaws/weaknesses/security loophole
+ that you chose to discuss from the paper. 
+
+	Note: I did not submit my A1 assignment due to personal reasons so my answer is based on a hypothetical implementation.
+	A major flaw that my assignment would have had was the ability for the user to choose any file name. Without any parsing for the filenames the user
+	could abuse malicious behavior which is a security issue. For example as described in the paper a file named "-n" could cause problems such as when 
+	being used with GNU cat it will cause a numbured output. 
+	
+
+Task B) Pick 1 other of these flaws/security loopholes and describe how 
+the filesystem you implemented for A1 does NOT(!!!) exhibit this 
+flaw/weakness/security loophole. 
+
+As mentioned in Section 6.2 of the paper, having leading and/or trailing spaces is a flaw in a lot of cases. So although not implemented my code would've
+had a parsing loop to avoid having unneeded whitespace.
+
+ 
